@@ -1,6 +1,6 @@
 {
   "name": "job-tracker",
-  "homepage": "http://coder-dai.github.io/coder-dai",
+  "homepage": "http://coder-dai.github.io/job-tracker",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
