@@ -1,0 +1,12 @@
+.nav-list {
+    height: 100vh;
+    width: 150px;
+    background-color: #0091EA;
+    padding-top: 50px;
+}
+
+.nav-list > li {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #fff;
+}
