@@ -1,10 +1,10 @@
 import {Route, Routes} from 'react-router-dom'
+import Nav from './components/Nav';
 
 function App() {
   return (
     <div className="App">
-      <h1>Job Tracker App- Appwrite Hackathon 2023</h1>
-      <h2>Team Coder-Dai</h2>
+      <Nav />
     </div>
   );
 }
