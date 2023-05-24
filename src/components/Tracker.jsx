@@ -1,3 +1,5 @@
+import './tracker.css'
+
 const Tracker = () => {
     return (
         <section>
