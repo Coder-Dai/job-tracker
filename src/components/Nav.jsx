@@ -18,12 +18,33 @@ const anonymousSignIn = () => {
   
   promise.then(function (response) {
       console.log(response, "USER"); // Success
+      alert('Anonymously logged in!')
   }, function (error) {
       console.log(error); // Failure
   });
 
 }
 
+const logout = () => {
+
+const client = new Client();
+
+const account = new Account(client);
+
+client
+    .setEndpoint('https://cloud.appwrite.io/v1') // Your API Endpoint
+    .setProject('646d0604df6385bc7d16') // Your project ID
+;
+
+const promise = account.deleteSessions();
+
+promise.then(function (response) {
+    console.log(response, "logout"); // Success
+    alert('Successfully logged out!')
+}, function (error) {
+    console.log(error); // Failure
+});
+}
 
 const Nav = () => {
   return (
@@ -31,7 +52,7 @@ const Nav = () => {
       <ul className='nav-list'>
         <Link to='/home'><li>Home</li></Link>
         <Link to='/tracker' onClick={anonymousSignIn}><li>Tracker</li></Link>
-        <li>Logout</li>
+        <li onClick={logout}>Logout</li>
       </ul>
     </nav>
   );
