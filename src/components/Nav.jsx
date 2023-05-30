@@ -31,6 +31,7 @@ const Nav = () => {
       <ul className='nav-list'>
         <Link to='/home'><li>Home</li></Link>
         <Link to='/tracker' onClick={anonymousSignIn}><li>Tracker</li></Link>
+        <li>Logout</li>
       </ul>
     </nav>
   );
