@@ -2,18 +2,10 @@ import './nav.css'
 import { Link } from 'react-router-dom';
 import { Client, Account } from "appwrite";
 
+let account;
 
 const anonymousSignIn = () => {
 
-  const client = new Client();
-  
-  const account = new Account(client);
-  
-  client
-      .setEndpoint('https://cloud.appwrite.io/v1') // Your API Endpoint
-      .setProject('646d0604df6385bc7d16') // Your project ID
-  ;
-  
   const promise = account.createAnonymousSession();
   
   promise.then(function (response) {
@@ -27,15 +19,6 @@ const anonymousSignIn = () => {
 
 const logout = () => {
 
-const client = new Client();
-
-const account = new Account(client);
-
-client
-    .setEndpoint('https://cloud.appwrite.io/v1') // Your API Endpoint
-    .setProject('646d0604df6385bc7d16') // Your project ID
-;
-
 const promise = account.deleteSessions();
 
 promise.then(function (response) {
@@ -47,6 +30,16 @@ promise.then(function (response) {
 }
 
 const Nav = () => {
+
+  const client = new Client();
+  
+  account = new Account(client);
+  
+  client
+      .setEndpoint('https://cloud.appwrite.io/v1') // Your API Endpoint
+      .setProject('646d0604df6385bc7d16') // Your project ID
+  ;
+
   return (
     <nav>
       <ul className='nav-list'>
