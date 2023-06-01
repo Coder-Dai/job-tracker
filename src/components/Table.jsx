@@ -1,10 +1,7 @@
 import React, { useState } from "react";
 import "./table.css";
-import data from "../mock-table-data.json";
 
-const Table = () => {
-  const [jobs, setJobs] = useState(data);
-
+const Table = ({ jobsList, setsJobsList }) => {
   return (
     <section>
       <div className="table-container">
@@ -29,7 +26,7 @@ const Table = () => {
             </tr>
           </thead>
           <tbody>
-            {jobs.map((job) => (
+            {jobsList.map((job) => (
               <tr>
                 <td>
                   <input type="checkbox"></input>
