@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
 * {
   border: 0;
   margin: 0;
@@ -5,4 +7,9 @@
   box-sizing: border-box;
   text-decoration: none;
   list-style: none;
+}
+
+body {
+  font-family: Roboto;
+  font-weight: 700;
 }

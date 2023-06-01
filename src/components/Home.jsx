@@ -1,11 +1,25 @@
 import "./home.css";
-import { createAno } from "appwrite";
 
 const Home = () => {
   return (
-    <main>
-      <h1> Welcome to Job Tracker App.</h1>
-      <h3> Click on Tracker menu to get started!</h3>
+    <main id="home">
+      <div id="home-container">
+        <div id="home-header">
+          <h1>Home</h1>
+        </div>
+        <div id="home-content">
+          <h2>Welcome back User!</h2>
+          <div id="home-body">
+            <div id="home-body-left">
+              <h3>Upcoming:</h3>
+              <p><b>02/03/23 - </b>Software Engineer- Apple</p>
+              <p><b>03/03/23 - </b> Front End Developer- Google</p>
+              <p><b>04/03/23 - </b> Go Developer- Netflix</p>
+            </div>
+            <div id="home-body-right">Chart</div>
+          </div>
+        </div>
+      </div>
     </main>
   );
 };
