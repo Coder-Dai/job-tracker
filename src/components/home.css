@@ -21,3 +21,12 @@
   color: #fff;
   font-size: 3rem;
 }
+
+#home-content {
+    margin: 30px auto;
+    padding: 30px;
+    width: 840px;
+    height: 490px;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 10px;
+}
