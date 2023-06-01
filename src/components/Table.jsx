@@ -1,23 +1,29 @@
 import React, { useEffect } from "react";
-import { getJobsAsync } from "../api/dataService";
+import { addJobAsync, getJobsAsync } from "../api/dataService";
 import "./table.css";
 
 const Table = ({ jobsList, setJobsList }) => {
   useEffect(() => {
-    async function fetchJobs() {
-      const jobs = await getJobsAsync("testing-123");
-      setJobsList(jobs);
-    }
-
     fetchJobs();
   });
+
+  async function fetchJobs() {
+    const jobs = await getJobsAsync("testing-123");
+    setJobsList(jobs);
+  }
+
+  async function postJob() {
+    await addJobAsync("testing-123");
+  }
 
   return (
     <section>
       <div className="table-container">
         <div className="button-container">
           <button className="delete-button">Delete</button>
-          <button className="add-button">+ Add job</button>
+          <button className="add-button" onClick={postJob}>
+            + Add job
+          </button>
         </div>
         <table>
           <thead>
@@ -45,8 +51,8 @@ const Table = ({ jobsList, setJobsList }) => {
                 <td>{job.company}</td>
                 <td>{job.salary}</td>
                 <td>{job.location}</td>
-                <td>{job.followUp}</td>
-                <td>{job.deadline}</td>
+                <td>{new Date(job.followUp).toDateString()}</td>
+                <td>{new Date(job.deadline).toDateString()}</td>
                 <td>{job.status}</td>
                 <td>{job.excitement}</td>
               </tr>
