@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import "./table.css";
 
 const Table = ({ jobsList, setsJobsList }) => {
+    const [job, setJob] = useState({});
+
   return (
     <section>
       <div className="table-container">
