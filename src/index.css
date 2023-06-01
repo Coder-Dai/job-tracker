@@ -8,3 +8,8 @@
   text-decoration: none;
   list-style: none;
 }
+
+body {
+  font-family: Roboto;
+  font-weight: 700;
+}
