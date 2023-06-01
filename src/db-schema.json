@@ -1,0 +1,12 @@
+{
+  "id": "string",
+  "userId": "REQUIRED-string",
+  "position": "REQUIRED-string",
+  "company": "REQUIRED-string",
+  "salary": "integer (range 0-1000000000)",
+  "location": "string",
+  "followUp": "dateTime",
+  "deadline": "dateTime",
+  "status": "enum (INTERESTED, APPLIED, INTERVIEWING, OFFERED, ACCEPTED, REJECTED) (default INTERESTED)",
+  "excitement": "integer (range 1-5) (default 1)"
+}
