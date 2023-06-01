@@ -1,9 +1,12 @@
+import React, { useState } from "react";
 import "./tracker.css";
+import Table from "./Table.jsx";
 
 const Tracker = () => {
+
   return (
     <section>
-      <h1>This is the trackers page!</h1>
+      <Table />
     </section>
   );
 };
