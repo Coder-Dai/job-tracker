@@ -21,6 +21,23 @@ td {
   padding: 1.9rem;
 }
 
-input {
-  align-items: left;
+.button-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.delete-button {
+  background-color: red;
+  color: white;
+  font-weight: 900;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.add-button {
+  background-color: #0091ea;
+  color: white;
+  font-weight: 900;
+  border-radius: 1rem;
+  padding: 1rem;
 }
