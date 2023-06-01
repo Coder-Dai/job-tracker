@@ -1,0 +1,26 @@
+.table-container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 5rem;
+  width: 90%;
+}
+
+table {
+  text-align: center;
+  font-family: sans-serif;
+  color: #565656;
+  font-size: 1.3rem;
+}
+
+th {
+  border-bottom: 0.3rem solid #bebebe;
+  padding: 1.4rem;
+}
+td {
+  border-bottom: 0.05rem solid #bebebe;
+  padding: 1.9rem;
+}
+
+input {
+  align-items: left;
+}
