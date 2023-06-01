@@ -16,7 +16,7 @@ const Home = () => {
               <p><b>03/03/23 - </b> Front End Developer- Google</p>
               <p><b>04/03/23 - </b> Go Developer- Netflix</p>
             </div>
-            <div id="home-body-right">CHART</div>
+            <div id="home-body-right">Chart</div>
           </div>
         </div>
       </div>
