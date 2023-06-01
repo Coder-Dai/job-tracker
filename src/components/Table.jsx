@@ -1,8 +1,16 @@
-import React, { useState } from "react";
+import React, { useEffect } from "react";
+import { getJobsAsync } from "../api/dataService";
 import "./table.css";
 
-const Table = ({ jobsList, setsJobsList }) => {
-    const [job, setJob] = useState({});
+const Table = ({ jobsList, setJobsList }) => {
+  useEffect(() => {
+    async function fetchJobs() {
+      const jobs = await getJobsAsync("testing-123");
+      setJobsList(jobs);
+    }
+
+    fetchJobs();
+  });
 
   return (
     <section>
