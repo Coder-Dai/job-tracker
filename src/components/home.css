@@ -23,10 +23,43 @@
 }
 
 #home-content {
-    margin: 30px auto;
-    padding: 30px;
-    width: 840px;
-    height: 490px;
-    border-radius: 0.5rem;
-    box-shadow: 0 4px 10px;
+  margin: 30px auto;
+  padding: 30px;
+  max-width: 840px;
+  min-height: 490px;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 10px;
+}
+
+#home-content > h2 {
+  text-align: center;
+  font-weight: 500;
+  font-size: 1.8rem;
+}
+
+#home-body {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 30px;
+}
+
+#home-body-left > h3 {
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+#home-body-left p {
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+#home-body-right {
+  box-shadow: 0 0 2px;
+  width: 50%;
+  min-height: 250px;
+  text-align: center;
+  padding: 20px;
+  font-weight: 400;
 }
