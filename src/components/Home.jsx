@@ -1,11 +1,10 @@
 import "./home.css";
-import { createAno } from "appwrite";
 
 const Home = () => {
   return (
     <main id="home">
       <div id="home-container">
-        <div Id="home-header">
+        <div id="home-header">
           <h1>HOME</h1>
         </div>
         <div id="home-content">
