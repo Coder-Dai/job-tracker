@@ -1,17 +1,8 @@
-import React, { useEffect } from "react";
-import { addJobAsync, getJobsAsync } from "../api/dataService";
+import React from "react";
+import { addJobAsync } from "../api/dataService";
 import "./table.css";
 
 const Table = ({ jobsList, setJobsList }) => {
-  useEffect(() => {
-    fetchJobs();
-  });
-
-  async function fetchJobs() {
-    const jobs = await getJobsAsync("testing-123");
-    setJobsList(jobs);
-  }
-
   async function postJob() {
     await addJobAsync("testing-123");
   }
