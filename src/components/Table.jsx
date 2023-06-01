@@ -8,6 +8,10 @@ const Table = () => {
   return (
     <section>
       <div className="table-container">
+        <div className="button-container">
+          <button className="delete-button">Delete</button>
+          <button className="add-button">+ Add job</button>
+        </div>
         <table>
           <thead>
             <tr>
