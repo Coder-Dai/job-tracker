@@ -3,19 +3,20 @@
 } */
 
 #home-container {
-    padding: 30px 30px 30px 180px;
+  padding: 30px 30px 30px 180px;
 }
 
 #home-header {
-    background-color: #00B0FF;
-    height: 130px;
-    width: 100%;
-    border-radius: 0.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  background-color: #00b0ff;
+  height: 150px;
+  width: 100%;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 5px;
 }
 
 #home-header > h1 {
-    color: #fff;
+  color: #fff;
 }
