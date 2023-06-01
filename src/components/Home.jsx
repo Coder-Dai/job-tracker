@@ -12,8 +12,9 @@ const Home = () => {
           <div id="home-body">
             <div id="home-body-left">
               <h3>Upcoming:</h3>
-              <p>Software Engineer: Apple</p>
-              <p>Software Engineer: Google</p>
+              <p><b>02/03/23 - </b>Software Engineer- Apple</p>
+              <p><b>03/03/23 - </b> Front End Developer- Google</p>
+              <p><b>04/03/23 -</b> Go Developer- Netflix</p>
             </div>
             <div id="home-body-right">CHART</div>
           </div>
