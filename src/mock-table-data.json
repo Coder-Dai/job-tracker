@@ -1,0 +1,79 @@
+[
+  {
+    "id": 1,
+    "position": "Software Developer",
+    "company": "Futureproof",
+    "salary": "£30,000",
+    "location": "Waterloo, London",
+    "followUp": "20/02/23",
+    "deadline": "01/01/23",
+    "status": "Interviewing",
+    "excitement": "1 star"
+  },
+  {
+    "id": 2,
+    "position": "React Developer",
+    "company": "Capgemini",
+    "salary": "£35,000",
+    "location": "Remote",
+    "followUp": "20/02/23",
+    "deadline": "01/05/23",
+    "status": "Interested",
+    "excitement": "2 star"
+  },
+  {
+    "id": 3,
+    "position": "Go Developer",
+    "company": "Apple",
+    "salary": "£55,000",
+    "location": "California, USA",
+    "followUp": "20/02/23",
+    "deadline": "01/01/23",
+    "status": "Interviewing",
+    "excitement": "2 star"
+  },
+  {
+    "id": 4,
+    "position": "Back-end Developer",
+    "company": "Google",
+    "salary": "£50,000",
+    "location": "Birmingham, UK",
+    "followUp": "20/02/23",
+    "deadline": "01/01/23",
+    "status": "Applied",
+    "excitement": "2 star"
+  },
+  {
+    "id": 5,
+    "position": "Cloud Engineer",
+    "company": "Netflix",
+    "salary": "£45,000",
+    "location": "Canary Wharf, London",
+    "followUp": "20/02/23",
+    "deadline": "01/01/23",
+    "status": "Job offered",
+    "excitement": "2 star"
+  },
+  {
+    "id": 6,
+    "position": "Front-end Developer",
+    "company": "Sparta Global",
+    "salary": "£30,000",
+    "location": "Waterloo, London",
+    "followUp": "20/02/23",
+    "deadline": "01/06/23",
+    "status": "Accepted",
+    "excitement": "2 star"
+  },
+  {
+    "id": 7,
+    "position": "Engineering manager",
+    "company": "Futureproof",
+    "salary": "£40,000",
+    "location": "Waterloo, London",
+    "followUp": "20/02/23",
+    "deadline": "01/01/23",
+    "status": "Interested",
+    "excitement": "2 star"
+  }
+]
