@@ -1,4 +1,5 @@
 import React from "react";
+import "./trackerHeader.css";
 
 const TrackerHeader = () => {
   return (
