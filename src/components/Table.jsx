@@ -7,12 +7,16 @@ const Table = ({ jobsList, setJobsList }) => {
     await addJobAsync("testing-123");
   }
 
+  const openForm = () => {
+
+  }
+
   return (
     <section>
       <div className="table-container">
         <div className="button-container">
           <button className="delete-button">Delete</button>
-          <button className="add-button" onClick={postJob}>
+          <button className="add-button" onClick={openForm}>
             + Add job
           </button>
         </div>
