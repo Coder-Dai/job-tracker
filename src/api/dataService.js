@@ -34,6 +34,5 @@ export async function updateJobAsync(userId, jobId, job) {
 }
 
 export async function deleteJobAsync(jobId) {
-  // TODO: Delete job in db
   await databases.deleteDocument(databaseId, collectionId, jobId);
 }
