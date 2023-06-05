@@ -17,15 +17,17 @@ export async function getJobsAsync(userId) {
   return docs.documents;
 }
 
-export async function addJobAsync(userId, job) {
-  await databases.createDocument(databaseId, collectionId, ID.unique(), {
-    userId: userId,
-    position: "Software Developer",
-    company: "Fake Company",
-    salary: 100000,
-    location: "London",
-    followUp: new Date("2024-01-01").toISOString(),
-    deadline: new Date("2024-01-01").toISOString(),
+export async function addJob(e, userId) {
+  e.preventDefault();
+  console.log(e);
+  await databases.createDocument(database, collection, ID.unique(), {
+    userId: "testing-123",
+    position: e.target[0].value,
+    company: e.target[1].value,
+    salary: e.target[2].value,
+    location: e.target[3].value,
+    followUp: e.target[4].value,
+    deadline: e.target[5].value,
   });
 }
 
