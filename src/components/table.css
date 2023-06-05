@@ -41,3 +41,16 @@ td {
   border-radius: 1rem;
   padding: 1rem;
 }
+
+/* Add job form */
+
+#form-modal {
+  border: 1px solid black;
+  border-radius: 0.5rem;
+  position: fixed;
+  top: 30px;
+  left: 30px;
+  width: 95%;
+  height: 90%;
+  background-color: rgba(123, 122, 122, 1);
+}
