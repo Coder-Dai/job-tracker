@@ -9,6 +9,12 @@ const Table = ({ jobsList, setJobsList }) => {
     setIsModalOpen(true);
   };
 
+  async function deleteJob() {
+    if (jobsList.length !== 0) {
+      await deleteJobAsync(jobsList[0].$id);
+    }
+  }
+
   return (
     <section>
       <div className="table-container">
