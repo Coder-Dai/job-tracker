@@ -23,6 +23,8 @@ const Table = ({ jobsList, setJobsList }) => {
           </button>
           {isModalOpen && (
             <div id="form-container">
+              <button onClick={() => {setIsModalOpen(false)}}>X</button>
+              <h2>Add a New Job Post</h2>
               <form id='form-modal'>
                 <label htmlFor="position">Position</label>
                 <input id="position" type="text" placeholder="Position"></input>
