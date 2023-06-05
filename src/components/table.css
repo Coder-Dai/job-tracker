@@ -44,7 +44,7 @@ td {
 
 /* Add job form */
 
-#form-modal {
+#form-container {
   border: 1px solid black;
   border-radius: 0.5rem;
   position: fixed;
@@ -52,5 +52,17 @@ td {
   left: 30px;
   width: 95%;
   height: 90%;
-  background-color: rgba(123, 122, 122, 1);
+  background-color: rgb(227, 224, 224);
+  padding: 35px;
+}
+
+#form-modal {
+  display: flex;
+  flex-direction: column;
+
+}
+
+#form-modal input {
+  width: 100px;
+  margin: 10px 0;
 }
