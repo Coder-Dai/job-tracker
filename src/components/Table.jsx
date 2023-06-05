@@ -5,6 +5,16 @@ import "./table.css";
 const Table = ({ jobsList, setJobsList }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
+  const [position, setPosition] = useState('')
+  const [company, setCompany] = useState('')
+  const [salary, setSalary] = useState('')
+  const [location, setLocation] = useState('')
+  const [followup, setFollowup] = useState('')
+  const [deadline, setDeadline] = useState('')
+  const [status, setStatus] = useState('')
+  const [excitement, setExcitement] = useState('')
+  const [description, setDescription] = useState('')
+
   async function postJob() {
     await addJobAsync("testing-123");
   }
@@ -42,6 +52,7 @@ const Table = ({ jobsList, setJobsList }) => {
                 <input id="status" type="text" placeholder="Status"></input>
                 <label htmlFor="excitement">Excitement</label>
                 <input id="excitement" type="text" placeholder="Excitement"></input>
+                <button type='submit'>Sumbit</button>
               </form>
             </div>
           )}
