@@ -20,7 +20,7 @@ export async function getJobsAsync(userId) {
 export async function addJob(e, userId) {
   e.preventDefault();
   console.log(e);
-  await databases.createDocument(database, collection, ID.unique(), {
+  await databases.createDocument(databaseId, collectionId, ID.unique(), {
     userId: "testing-123",
     position: e.target[0].value,
     company: e.target[1].value,

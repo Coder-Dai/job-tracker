@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { addJob } from "../api/dataService";
+import { addJob, deleteJobAsync } from "../api/dataService";
 import "./table.css";
 
 const Table = ({ jobsList, setJobsList }) => {
@@ -19,7 +19,9 @@ const Table = ({ jobsList, setJobsList }) => {
     <section>
       <div className="table-container">
         <div className="button-container">
-          <button className="delete-button">Delete</button>
+          <button className="delete-button" onClick={deleteJob}>
+            Delete
+          </button>
           <button className="add-button" onClick={openForm}>
             + Add job
           </button>
