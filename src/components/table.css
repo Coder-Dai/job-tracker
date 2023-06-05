@@ -48,18 +48,17 @@ td {
   border: 1px solid black;
   border-radius: 0.5rem;
   position: fixed;
-  top: 30px;
-  left: 30px;
-  width: 95%;
-  height: 90%;
-  background-color: rgb(227, 224, 224);
+  top: 20%;
+  left: 40%;
+  width: 450px;
+  height: 550px;
+  background-color: #fff;
   padding: 35px;
 }
 
 #form-modal {
   display: flex;
   flex-direction: column;
-
 }
 
 #form-modal input {
