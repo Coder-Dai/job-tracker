@@ -1,15 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import { addJobAsync } from "../api/dataService";
 import "./table.css";
 
 const Table = ({ jobsList, setJobsList }) => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   async function postJob() {
     await addJobAsync("testing-123");
   }
 
   const openForm = () => {
-
-  }
+    setIsModalOpen(true);
+  };
 
   return (
     <section>
@@ -19,6 +21,28 @@ const Table = ({ jobsList, setJobsList }) => {
           <button className="add-button" onClick={openForm}>
             + Add job
           </button>
+          {isModalOpen && (
+            <div id="form-container">
+              <form id='form-modal'>
+                <label htmlFor="position">Position</label>
+                <input id="position" type="text" placeholder="Position"></input>
+                <label htmlFor="company">Company</label>
+                <input id="Company" type="text" placeholder="Company"></input>
+                <label htmlFor="salary">Salary</label>
+                <input id="salary" type="number" placeholder="Salary"></input>
+                <label htmlFor="location">Location</label>
+                <input id="location" type="text" placeholder="Location"></input>
+                <label htmlFor="followup">Follow up</label>
+                <input id="followup" type="date" placeholder="Follow up"></input>
+                <label htmlFor="deadline">Deadline</label>
+                <input id="deadline" type="date" placeholder="Deadline"></input>
+                <label htmlFor="status">Status</label>
+                <input id="status" type="text" placeholder="Status"></input>
+                <label htmlFor="excitement">Excitement</label>
+                <input id="excitement" type="text" placeholder="Excitement"></input>
+              </form>
+            </div>
+          )}
         </div>
         <table>
           <thead>
