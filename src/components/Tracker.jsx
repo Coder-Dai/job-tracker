@@ -9,7 +9,7 @@ const Tracker = () => {
 
   useEffect(() => {
     fetchJobs();
-  });
+  }, []);
 
   async function fetchJobs() {
     const jobs = await getJobsAsync("testing-123");
