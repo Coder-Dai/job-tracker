@@ -1,5 +1,5 @@
 import React from "react";
-import { addJobAsync } from "../api/dataService";
+import { addJobAsync, deleteJobAsync } from "../api/dataService";
 import "./table.css";
 
 const Table = ({ jobsList, setJobsList }) => {
@@ -7,11 +7,19 @@ const Table = ({ jobsList, setJobsList }) => {
     await addJobAsync("testing-123");
   }
 
+  async function deleteJob() {
+    if (jobsList.length !== 0) {
+      await deleteJobAsync(jobsList[0].$id);
+    }
+  }
+
   return (
     <section>
       <div className="table-container">
         <div className="button-container">
-          <button className="delete-button">Delete</button>
+          <button className="delete-button" onClick={deleteJob}>
+            Delete
+          </button>
           <button className="add-button" onClick={postJob}>
             + Add job
           </button>
