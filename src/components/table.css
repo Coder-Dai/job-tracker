@@ -41,3 +41,27 @@ td {
   border-radius: 1rem;
   padding: 1rem;
 }
+
+/* Add job form */
+
+#form-container {
+  border: 1px solid black;
+  border-radius: 0.5rem;
+  position: fixed;
+  top: 20%;
+  left: 40%;
+  width: 450px;
+  height: 550px;
+  background-color: #fff;
+  padding: 35px;
+}
+
+#form-modal {
+  display: flex;
+  flex-direction: column;
+}
+
+#form-modal input {
+  width: 100px;
+  margin: 10px 0;
+}
