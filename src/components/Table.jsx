@@ -29,29 +29,13 @@ const Table = ({ jobsList, setJobsList }) => {
               <h2>Add a New Job Post</h2>
               <form id="form-modal" onSubmit={addJob}>
                 <label htmlFor="position">Position</label>
-                <input
-                  id="position"
-                  type="text"
-                  placeholder="Position"
-                ></input>
+                <input id="position" type="text" placeholder="Position"></input>
                 <label htmlFor="company">Company</label>
-                <input
-                  id="Company"
-                  type="text"
-                  placeholder="Company"
-                ></input>
+                <input id="Company" type="text" placeholder="Company"></input>
                 <label htmlFor="salary">Salary</label>
-                <input
-                  id="salary"
-                  type="number"
-                  placeholder="Salary"
-                ></input>
+                <input id="salary" type="number" placeholder="Salary"></input>
                 <label htmlFor="location">Location</label>
-                <input
-                  id="location"
-                  type="text"
-                  placeholder="Location"
-                ></input>
+                <input id="location" type="text" placeholder="Location"></input>
                 <label htmlFor="followup">Follow up</label>
                 <input
                   id="followup"
@@ -59,17 +43,9 @@ const Table = ({ jobsList, setJobsList }) => {
                   placeholder="Follow up"
                 ></input>
                 <label htmlFor="deadline">Deadline</label>
-                <input
-                  id="deadline"
-                  type="date"
-                  placeholder="Deadline"
-                ></input>
+                <input id="deadline" type="date" placeholder="Deadline"></input>
                 <label htmlFor="status">Status</label>
-                <input
-                  id="status"
-                  type="text"
-                  placeholder="Status"
-                ></input>
+                <input id="status" type="text" placeholder="Status"></input>
                 <label htmlFor="excitement">Excitement</label>
                 <input
                   id="excitement"
@@ -80,9 +56,9 @@ const Table = ({ jobsList, setJobsList }) => {
                 <input
                   id="description"
                   type="textfield"
-                  placeholder="Excitement"
+                  placeholder="Description"
                 ></input>
-                <button type="submit">Sumbit</button>
+                <button type="submit">Submit</button>
               </form>
             </div>
           )}
