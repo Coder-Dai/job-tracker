@@ -1,15 +1,45 @@
-import React from "react";
+import React, { useContext } from "react";
 import { addJobAsync, deleteJobAsync } from "../api/dataService";
+import UserContext from "../contexts/userContext";
 import "./table.css";
 
 const Table = ({ jobsList, setJobsList }) => {
+  const { userId } = useContext(UserContext);
+
   async function postJob() {
-    await addJobAsync("testing-123");
+    if (userId) {
+      const docId = crypto.randomUUID();
+
+      const job = {
+        $id: docId,
+        userId,
+        position: "Software Developer",
+        company: "Fake Company",
+        salary: 100000,
+        location: "London",
+        followUp: new Date("2024-01-01").toISOString(),
+        deadline: new Date("2024-01-01").toISOString(),
+        status: "INTERESTED",
+        excitement: 1,
+      };
+
+      setJobsList((currJobsList) => {
+        currJobsList.push(job);
+        setJobsList(currJobsList);
+      });
+
+      await addJobAsync(job);
+    }
   }
 
   async function deleteJob() {
     if (jobsList.length !== 0) {
       await deleteJobAsync(jobsList[0].$id);
+
+      setJobsList((currJobsList) => {
+        currJobsList.shift();
+        setJobsList(currJobsList);
+      });
     }
   }
 
@@ -42,7 +72,7 @@ const Table = ({ jobsList, setJobsList }) => {
           </thead>
           <tbody>
             {jobsList.map((job) => (
-              <tr>
+              <tr key={job.$id}>
                 <td>
                   <input type="checkbox"></input>
                 </td>

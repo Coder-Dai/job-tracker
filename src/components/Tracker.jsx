@@ -1,18 +1,22 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { getJobsAsync } from "../api/dataService";
 import "./tracker.css";
 import Table from "./Table.jsx";
 import TrackerHeader from "./TrackerHeader.jsx";
+import UserContext from "../contexts/userContext";
 
 const Tracker = () => {
+  const { userId } = useContext(UserContext);
   const [jobsList, setJobsList] = useState([]);
 
   useEffect(() => {
-    fetchJobs();
-  });
+    if (userId) {
+      fetchAndSetJobs();
+    }
+  }, [userId]);
 
-  async function fetchJobs() {
-    const jobs = await getJobsAsync("testing-123");
+  async function fetchAndSetJobs() {
+    const jobs = await getJobsAsync(userId);
     setJobsList(jobs);
   }
 

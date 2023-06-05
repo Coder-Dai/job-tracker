@@ -2,15 +2,21 @@ import { Route, Routes } from "react-router-dom";
 import Nav from "./components/Nav";
 import Home from "./components/Home";
 import Tracker from "./components/Tracker";
+import { useState } from "react";
+import UserContext from "./contexts/userContext";
 
 function App() {
+  const [userId, setUserId] = useState(null);
+
   return (
     <div className="App">
-      <Nav />
-      <Routes>
-        <Route path="/home" element={<Home />} />
-        <Route path="/tracker" element={<Tracker />} />
-      </Routes>
+      <UserContext.Provider value={{ userId, setUserId }}>
+        <Nav />
+        <Routes>
+          <Route path="/home" element={<Home />} />
+          <Route path="/tracker" element={<Tracker />} />
+        </Routes>
+      </UserContext.Provider>
     </div>
   );
 }
