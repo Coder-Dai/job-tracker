@@ -24,8 +24,12 @@ const Tracker = () => {
 
   return (
     <section>
-      <TrackerHeader allJobs={allJobs} setJobsList={setJobsList}/>
-      <Table setAllJobs={setAllJobs} jobsList={jobsList} setJobsList={setJobsList} />
+      <TrackerHeader allJobs={allJobs} setJobsList={setJobsList} />
+      <Table
+        setAllJobs={setAllJobs}
+        jobsList={jobsList}
+        setJobsList={setJobsList}
+      />
     </section>
   );
 };
