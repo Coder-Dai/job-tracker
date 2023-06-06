@@ -1,15 +1,11 @@
 import "./nav.css";
 import { Link } from "react-router-dom";
-import { Client, Account } from "appwrite";
+import { Account } from "appwrite";
 import { useContext } from "react";
 import UserContext from "../contexts/userContext";
+import { appwriteClient } from "../appwriteClient/client"
 
-const projectEndPoint = "https://cloud.appwrite.io/v1";
-const projectId = "646d0604df6385bc7d16";
-
-const client = new Client().setEndpoint(projectEndPoint).setProject(projectId);
-
-const account = new Account(client);
+const account = new Account(appwriteClient);
 
 const Nav = () => {
   const { setUserId } = useContext(UserContext);
