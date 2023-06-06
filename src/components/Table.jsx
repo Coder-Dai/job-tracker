@@ -68,42 +68,73 @@ const Table = ({ jobsList, setJobsList }) => {
                 onClick={() => {
                   setIsModalOpen(false);
                 }}
-                id='form-close-btn'
+                id="form-close-btn"
               >
                 X
               </button>
-              <h2 id='form-heading'>Add a New Job Post</h2>
+              <h2 id="form-heading">Add a New Job Post</h2>
               <form id="form-modal" onSubmit={postJob}>
-                <label htmlFor="position">Position</label>
-                <input id="position" type="text" placeholder="Position"></input>
-                <label htmlFor="company">Company</label>
-                <input id="Company" type="text" placeholder="Company"></input>
-                <label htmlFor="salary">Salary</label>
-                <input id="salary" type="number" placeholder="Salary"></input>
-                <label htmlFor="location">Location</label>
-                <input id="location" type="text" placeholder="Location"></input>
-                <label htmlFor="followup">Follow up</label>
-                <input
-                  id="followup"
-                  type="date"
-                  placeholder="Follow up"
-                ></input>
-                <label htmlFor="deadline">Deadline</label>
-                <input id="deadline" type="date" placeholder="Deadline"></input>
-                <label htmlFor="status">Status</label>
-                <input id="status" type="text" placeholder="Status"></input>
-                <label htmlFor="excitement">Excitement</label>
-                <input
-                  id="excitement"
-                  type="text"
-                  placeholder="Excitement"
-                ></input>
+                <div>
+                  <label htmlFor="position">Position</label>
+                  <input
+                    id="position"
+                    type="text"
+                    placeholder="Position"
+                  ></input>
+                  </div>
+                  <div>
+                  <label htmlFor="company">Company</label>
+                  <input id="Company" type="text" placeholder="Company"></input>
+                </div>
+                <div>
+                  <label htmlFor="salary">Salary</label>
+                  <input id="salary" type="number" placeholder="Salary"></input>
+                  </div>
+                  <div>
+                  <label htmlFor="location">Location</label>
+                  <input
+                    id="location"
+                    type="text"
+                    placeholder="Location"
+                  ></input>
+                </div>
+                <div>
+                  <label htmlFor="followup">Follow up</label>
+                  <input
+                    id="followup"
+                    type="date"
+                    placeholder="Follow up"
+                  ></input>
+                  </div>
+                  <div>
+                  <label htmlFor="deadline">Deadline</label>
+                  <input
+                    id="deadline"
+                    type="date"
+                    placeholder="Deadline"
+                  ></input>
+                </div>
+                <div>
+                  <label htmlFor="status">Status</label>
+                  <input id="status" type="text" placeholder="Status"></input>
+                  </div>
+                  <div>
+                  <label htmlFor="excitement">Excitement</label>
+                  <input
+                    id="excitement"
+                    type="text"
+                    placeholder="Excitement"
+                  ></input>
+                </div>
+                <div>
                 <label htmlFor="description">Job Description</label>
+                
                 <input
                   id="description"
                   type="textfield"
                   placeholder="Description"
                 ></input>
+                </div>
                 <button type="submit">Submit</button>
               </form>
             </div>
