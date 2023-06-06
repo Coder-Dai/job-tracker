@@ -68,10 +68,11 @@ const Table = ({ jobsList, setJobsList }) => {
                 onClick={() => {
                   setIsModalOpen(false);
                 }}
+                id='form-close-btn'
               >
                 X
               </button>
-              <h2>Add a New Job Post</h2>
+              <h2 id='form-heading'>Add a New Job Post</h2>
               <form id="form-modal" onSubmit={postJob}>
                 <label htmlFor="position">Position</label>
                 <input id="position" type="text" placeholder="Position"></input>

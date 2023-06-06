@@ -56,9 +56,20 @@ td {
   padding: 35px;
 }
 
+#form-close-btn {
+  float: right;
+  cursor: pointer;
+  background: transparent;
+}
+
+#form-heading {
+  margin: 10px 0 30px;
+  font-weight: 500;
+}
+
 #form-modal {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  /* grid-template-areas: ; */
 }
 
 #form-modal input {
