@@ -3,7 +3,7 @@ import { addJobAsync, deleteJobAsync } from "../api/dataService";
 import UserContext from "../contexts/userContext";
 import "./table.css";
 
-const Table = ({ jobsList, setJobsList }) => {
+const Table = ({ setAllJobs, jobsList, setJobsList }) => {
   const { userId } = useContext(UserContext);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -33,6 +33,7 @@ const Table = ({ jobsList, setJobsList }) => {
       const newJobsList = [...jobsList];
       newJobsList.push(job);
 
+      setAllJobs(newJobsList);
       setJobsList(newJobsList);
 
       await addJobAsync(job);
@@ -48,6 +49,7 @@ const Table = ({ jobsList, setJobsList }) => {
       const newJobsList = [...jobsList];
       newJobsList.shift();
 
+      setAllJobs(newJobsList);
       setJobsList(newJobsList);
     }
   }
