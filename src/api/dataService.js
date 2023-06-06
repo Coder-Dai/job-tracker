@@ -1,13 +1,15 @@
-import { Client, Databases, Query } from "appwrite";
+import { Databases, Query } from "appwrite";
+import { appwriteClient } from "../appwriteClient/client";
 
-const projectEndPoint = "https://cloud.appwrite.io/v1";
-const projectId = "646d0604df6385bc7d16";
+/*
+  This file contains functions that allow you to talk to the database.
+  They allow you to perform CRUD operations.
+*/
+
+const databases = new Databases(appwriteClient);
+
 const databaseId = "testing-testing";
 const collectionId = "jobs";
-
-const client = new Client().setEndpoint(projectEndPoint).setProject(projectId);
-
-const databases = new Databases(client);
 
 export async function getJobsAsync(userId) {
   const docs = await databases.listDocuments(databaseId, collectionId, [
