@@ -8,5 +8,8 @@
   "followUp": "dateTime",
   "deadline": "dateTime",
   "status": "enum (INTERESTED, APPLIED, INTERVIEWING, OFFERED, ACCEPTED, REJECTED) (default INTERESTED)",
-  "excitement": "integer (range 1-5) (default 1)"
+  "excitement": "integer (range 1-5) (default 1)",
+  "url": "url",
+  "description": "string",
+  "notes": "string"
 }

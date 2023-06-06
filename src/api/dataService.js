@@ -1,4 +1,4 @@
-import { Client, Databases, ID, Query } from "appwrite";
+import { Client, Databases, Query } from "appwrite";
 
 const projectEndPoint = "https://cloud.appwrite.io/v1";
 const projectId = "646d0604df6385bc7d16";
@@ -17,15 +17,15 @@ export async function getJobsAsync(userId) {
   return docs.documents;
 }
 
-export async function addJobAsync(userId, job) {
-  await databases.createDocument(databaseId, collectionId, ID.unique(), {
-    userId: userId,
-    position: "Software Developer",
-    company: "Fake Company",
-    salary: 100000,
-    location: "London",
-    followUp: new Date("2024-01-01").toISOString(),
-    deadline: new Date("2024-01-01").toISOString(),
+export async function addJobAsync(job) {
+  await databases.createDocument(databaseId, collectionId, job.$id, {
+    userId: job.userId,
+    position: job.position,
+    company: job.company,
+    salary: job.salary,
+    location: job.location,
+    followUp: job.followUp,
+    deadline: job.deadline,
   });
 }
 

@@ -1,45 +1,40 @@
 import "./nav.css";
 import { Link } from "react-router-dom";
 import { Client, Account } from "appwrite";
+import { useContext } from "react";
+import UserContext from "../contexts/userContext";
 
-let account;
+const projectEndPoint = "https://cloud.appwrite.io/v1";
+const projectId = "646d0604df6385bc7d16";
 
-const anonymousSignIn = () => {
-  const promise = account.createAnonymousSession();
+const client = new Client().setEndpoint(projectEndPoint).setProject(projectId);
 
-  promise.then(
-    function (response) {
-      console.log(response, "USER"); // Success
-      alert("Anonymously logged in!");
-    },
-    function (error) {
-      console.log(error); // Failure
-    }
-  );
-};
-
-const logout = () => {
-  const promise = account.deleteSessions();
-
-  promise.then(
-    function (response) {
-      console.log(response, "logout"); // Success
-      alert("Successfully logged out!");
-    },
-    function (error) {
-      console.log(error); // Failure
-    }
-  );
-};
+const account = new Account(client);
 
 const Nav = () => {
-  const client = new Client();
+  const { setUserId } = useContext(UserContext);
 
-  account = new Account(client);
+  async function AnonymousSignIn() {
+    try {
+      const user = await account.createAnonymousSession();
 
-  client
-    .setEndpoint("https://cloud.appwrite.io/v1") // Your API Endpoint
-    .setProject("646d0604df6385bc7d16"); // Your project ID
+      setUserId(user.userId);
+      alert("Anonymously logged in!");
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  async function LogOut() {
+    try {
+      await account.deleteSessions();
+
+      setUserId(null);
+      alert("Successfully logged out!");
+    } catch (error) {
+      console.log(error);
+    }
+  }
 
   return (
     <nav>
@@ -47,7 +42,7 @@ const Nav = () => {
         <Link to="/home">
           <li>Home</li>
         </Link>
-        <Link to="/tracker" onClick={anonymousSignIn}>
+        <Link to="/tracker" onClick={AnonymousSignIn}>
           <li>Tracker</li>
         </Link>
         <Link to="/myaccount">
