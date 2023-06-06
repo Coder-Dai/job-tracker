@@ -2,6 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import Nav from "./components/Nav";
 import Home from "./components/Home";
 import Tracker from "./components/Tracker";
+import { MyAccount } from "./components/MyAccount";
 import { useState } from "react";
 import UserContext from "./contexts/userContext";
 
@@ -15,6 +16,7 @@ function App() {
         <Routes>
           <Route path="/home" element={<Home />} />
           <Route path="/tracker" element={<Tracker />} />
+          <Route path="/myaccount" element={<MyAccount />} />
         </Routes>
       </UserContext.Provider>
     </div>

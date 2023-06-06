@@ -45,7 +45,10 @@ const Nav = () => {
         <Link to="/tracker" onClick={AnonymousSignIn}>
           <li>Tracker</li>
         </Link>
-        <li onClick={LogOut}>Logout</li>
+        <Link to="/myaccount">
+          <li>MyAccount</li>
+        </Link>
+        <li onClick={logout}>Logout</li>
       </ul>
     </nav>
   );

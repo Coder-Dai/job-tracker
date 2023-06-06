@@ -1,0 +1,42 @@
+#myaccount-container {
+  padding: 30px 30px 30px 180px;
+}
+
+#myaccount-header {
+  background-color: #00b0ff;
+  height: 150px;
+  width: 100%;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 5px;
+}
+#myaccount-header > h1 {
+  color: #fff;
+  font-size: 3rem;
+}
+#myaccount-content {
+  margin: 30px auto;
+  padding: 30px;
+  max-width: 840px;
+  min-height: 490px;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 10px;
+  text-align: center;
+}
+
+#myaccount button {
+  background: #f1356d;
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#myaccount-form input {
+  border: 1px solid grey;
+  padding: 8px;
+  border-radius: 8px;
+}
