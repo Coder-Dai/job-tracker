@@ -7,6 +7,7 @@ import UserContext from "../contexts/userContext";
 
 const Tracker = () => {
   const { userId } = useContext(UserContext);
+  const [allJobs, setAllJobs] = useState([]);
   const [jobsList, setJobsList] = useState([]);
 
   useEffect(() => {
@@ -17,13 +18,18 @@ const Tracker = () => {
 
   async function fetchAndSetJobs() {
     const jobs = await getJobsAsync(userId);
+    setAllJobs(jobs);
     setJobsList(jobs);
   }
 
   return (
     <section>
-      <TrackerHeader />
-      <Table jobsList={jobsList} setJobsList={setJobsList} />
+      <TrackerHeader allJobs={allJobs} setJobsList={setJobsList} />
+      <Table
+        setAllJobs={setAllJobs}
+        jobsList={jobsList}
+        setJobsList={setJobsList}
+      />
     </section>
   );
 };
