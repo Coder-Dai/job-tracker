@@ -110,7 +110,7 @@ const Table = ({ jobsList, setJobsList }) => {
                   <label htmlFor="description">Job Description</label>
                   <input id="description" type="textfield"></input>
                 </div>
-                <button type="submit">Submit</button>
+                <button type="submit" id='form-submit-btn'>Save</button>
               </form>
             </div>
           )}
