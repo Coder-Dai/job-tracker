@@ -63,7 +63,7 @@ td {
 }
 
 #form-heading {
-  margin: 10px 0 30px;
+  margin: 20px 0 30px;
   font-weight: 500;
 }
 
@@ -84,7 +84,9 @@ td {
 }
 
 #form-modal div label {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
+  opacity: 0.75;
+  font-weight: 400;
 }
 
 #form-modal input {
