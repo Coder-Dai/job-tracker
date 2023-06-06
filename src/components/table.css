@@ -68,8 +68,23 @@ td {
 }
 
 #form-modal {
+  /* display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; */
   display: grid;
-  /* grid-template-areas: ; */
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  gap: 10px;
+}
+
+#form-modal div {
+  display: flex;
+  flex-direction: column;
+}
+
+#form-modal div label {
+  font-size: 1.2rem;
 }
 
 #form-modal input {
