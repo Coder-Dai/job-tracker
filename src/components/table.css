@@ -89,6 +89,13 @@ td {
   font-weight: 400;
 }
 
+#form-modal div input {
+  border:1px solid rgba(0,0,0,0.2);
+  border-radius: 0.3rem;
+  width: 90%;
+  padding: 7px 3px;
+}
+
 #form-modal input {
   width: 100px;
   margin: 10px 0;
