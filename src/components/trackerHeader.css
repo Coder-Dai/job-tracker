@@ -19,12 +19,12 @@
   justify-content: space-evenly;
 }
 
-h2 {
+.tracker-header-tabs h2 {
   padding: 1.1rem;
   border-radius: 1rem;
   cursor: pointer;
 }
 
-h2:hover {
+.tracker-header-tabs h2:hover {
   background-color: #005991;
 }
