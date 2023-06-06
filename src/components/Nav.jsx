@@ -48,7 +48,7 @@ const Nav = () => {
         <Link to="/myaccount">
           <li>MyAccount</li>
         </Link>
-        <li onClick={logout}>Logout</li>
+        <li onClick={LogOut}>Logout</li>
       </ul>
     </nav>
   );
