@@ -80,7 +80,7 @@ const JobForm = ({ setIsModalOpen, setAllJobs, jobsList, setJobsList }) => {
         <div>
           <label htmlFor="status">Status</label>
           <select name="status" id="status">
-            <option value="INTERESTED" selected="selected">
+            <option value="INTERESTED" selected>
               Interested
             </option>
             <option value="APPLIED">Applied</option>
@@ -93,7 +93,7 @@ const JobForm = ({ setIsModalOpen, setAllJobs, jobsList, setJobsList }) => {
         <div>
           <label htmlFor="excitement">Excitement</label>
           <select name="excitement" id="excitement">
-            <option value="1" selected="selected">
+            <option value="1" selected>
               1
             </option>
             <option value="2">2</option>
