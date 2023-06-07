@@ -1,4 +1,41 @@
-const JobForm = ({setIsModalOpen}) => {
+import { useContext } from "react";
+import { addJobAsync } from "../api/dataService";
+import UserContext from "../contexts/userContext";
+
+const JobForm = ({setIsModalOpen, setAllJobs, jobsList, setJobsList}) => {
+    const { userId } = useContext(UserContext);
+
+    async function postJob(e) {
+        e.preventDefault();
+    
+        if (userId) {
+          const docId = crypto.randomUUID();
+    
+          const job = {
+            $id: docId,
+            userId,
+            position: e.target[0].value,
+            company: e.target[1].value,
+            salary: e.target[2].value,
+            location: e.target[3].value,
+            followUp: new Date(e.target[4].value).toISOString(),
+            deadline: new Date(e.target[5].value).toISOString(),
+            status: "INTERESTED",
+            excitement: 1,
+          };
+    
+          const newJobsList = [...jobsList];
+          newJobsList.push(job);
+    
+          setAllJobs(newJobsList);
+          setJobsList(newJobsList);
+    
+          await addJobAsync(job);
+        } else {
+          console.log("userId is null");
+        }
+      }
+
     return (
         <div id="form-container">
               <button
