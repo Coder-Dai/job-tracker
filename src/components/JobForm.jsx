@@ -19,10 +19,14 @@ const JobForm = ({ setIsModalOpen, setAllJobs, jobsList, setJobsList }) => {
         company: e.target[1].value,
         salary: e.target[2].value,
         location: e.target[3].value,
-        followUp: new Date(e.target[4].value).toISOString(),
-        deadline: new Date(e.target[5].value).toISOString(),
-        status: "INTERESTED",
-        excitement: 1,
+        followUp: e.target[4].value
+          ? new Date(e.target[4].value).toISOString()
+          : undefined,
+        deadline: e.target[5].value
+          ? new Date(e.target[5].value).toISOString()
+          : undefined,
+        status: e.target[6].value,
+        excitement: e.target[7].value,
       };
 
       const newJobsList = [...jobsList];
@@ -50,16 +54,16 @@ const JobForm = ({ setIsModalOpen, setAllJobs, jobsList, setJobsList }) => {
       <h2 id="form-heading">Add a New Job Post</h2>
       <form id="form-modal" onSubmit={postJob}>
         <div>
-          <label htmlFor="position">Position</label>
-          <input id="position" type="text"></input>
+          <label htmlFor="position">Position *</label>
+          <input id="position" type="text" required></input>
         </div>
         <div>
-          <label htmlFor="company">Company</label>
-          <input id="Company" type="text"></input>
+          <label htmlFor="company">Company *</label>
+          <input id="Company" type="text" required></input>
         </div>
         <div>
-          <label htmlFor="salary">Salary</label>
-          <input id="salary" type="number"></input>
+          <label htmlFor="salary">Salary *</label>
+          <input id="salary" type="number" required></input>
         </div>
         <div>
           <label htmlFor="location">Location</label>
@@ -76,7 +80,9 @@ const JobForm = ({ setIsModalOpen, setAllJobs, jobsList, setJobsList }) => {
         <div>
           <label htmlFor="status">Status</label>
           <select name="status" id="status">
-            <option value="INTERESTED">Interested</option>
+            <option value="INTERESTED" selected="selected">
+              Interested
+            </option>
             <option value="APPLIED">Applied</option>
             <option value="INTERVIEWING">Interviewing</option>
             <option value="OFFERED">Offered</option>
@@ -86,7 +92,15 @@ const JobForm = ({ setIsModalOpen, setAllJobs, jobsList, setJobsList }) => {
         </div>
         <div>
           <label htmlFor="excitement">Excitement</label>
-          <input id="excitement" type="text"></input>
+          <select name="excitement" id="excitement">
+            <option value="1" selected="selected">
+              1
+            </option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
         </div>
         <div>
           <label htmlFor="description">Job Description</label>

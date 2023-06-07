@@ -28,6 +28,8 @@ export async function addJobAsync(job) {
     location: job.location,
     followUp: job.followUp,
     deadline: job.deadline,
+    status: job.status,
+    excitement: job.excitement,
   });
 }
 

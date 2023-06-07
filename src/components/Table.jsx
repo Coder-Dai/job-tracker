@@ -68,8 +68,12 @@ const Table = ({ setAllJobs, jobsList, setJobsList }) => {
                 <td>{job.company}</td>
                 <td>{job.salary}</td>
                 <td>{job.location}</td>
-                <td>{new Date(job.followUp).toDateString()}</td>
-                <td>{new Date(job.deadline).toDateString()}</td>
+                <td>
+                  {job.followUp ? new Date(job.followUp).toDateString() : null}
+                </td>
+                <td>
+                  {job.deadline ? new Date(job.deadline).toDateString() : null}
+                </td>
                 <td>{job.status}</td>
                 <td>{job.excitement}</td>
               </tr>
