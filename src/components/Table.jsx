@@ -1,47 +1,15 @@
-import React, { useContext, useState } from "react";
-import { addJobAsync, deleteJobAsync } from "../api/dataService";
-import UserContext from "../contexts/userContext";
+import React, { useState } from "react";
+import { deleteJobAsync } from "../api/dataService";
+
 import JobForm from "./JobForm";
 import "./table.css";
 
 const Table = ({ setAllJobs, jobsList, setJobsList }) => {
-  const { userId } = useContext(UserContext);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const openForm = () => {
     setIsModalOpen(true);
   };
-
-  async function postJob(e) {
-    e.preventDefault();
-
-    if (userId) {
-      const docId = crypto.randomUUID();
-
-      const job = {
-        $id: docId,
-        userId,
-        position: e.target[0].value,
-        company: e.target[1].value,
-        salary: e.target[2].value,
-        location: e.target[3].value,
-        followUp: new Date(e.target[4].value).toISOString(),
-        deadline: new Date(e.target[5].value).toISOString(),
-        status: "INTERESTED",
-        excitement: 1,
-      };
-
-      const newJobsList = [...jobsList];
-      newJobsList.push(job);
-
-      setAllJobs(newJobsList);
-      setJobsList(newJobsList);
-
-      await addJobAsync(job);
-    } else {
-      console.log("userId is null");
-    }
-  }
 
   async function deleteJob() {
     if (jobsList.length !== 0) {
@@ -65,7 +33,14 @@ const Table = ({ setAllJobs, jobsList, setJobsList }) => {
           <button className="add-button" onClick={openForm}>
             + Add job
           </button>
-          {isModalOpen && <JobForm setIsModalOpen={setIsModalOpen}/>}
+          {isModalOpen && (
+            <JobForm
+              setIsModalOpen={setIsModalOpen}
+              setAllJobs={setAllJobs}
+              jobsList={jobsList}
+              setJobsList={setJobsList}
+            />
+          )}
         </div>
         <table>
           <thead>
