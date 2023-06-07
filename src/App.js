@@ -15,6 +15,7 @@ function App() {
       <UserContext.Provider value={{ userId, setUserId }}>
         <Nav />
         <Routes>
+          <Route path="/" element={<Landing />} />
           <Route path="/home" element={<Home />} />
           <Route path="/tracker" element={<Tracker />} />
           <Route path="/myaccount" element={<MyAccount />} />
