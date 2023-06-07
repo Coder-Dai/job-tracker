@@ -9,7 +9,6 @@ const JobForm = ({ setIsModalOpen, setAllJobs, jobsList, setJobsList }) => {
     e.preventDefault();
     setIsModalOpen(false);
 
-
     if (userId) {
       const docId = crypto.randomUUID();
 
@@ -76,7 +75,14 @@ const JobForm = ({ setIsModalOpen, setAllJobs, jobsList, setJobsList }) => {
         </div>
         <div>
           <label htmlFor="status">Status</label>
-          <input id="status" type="text"></input>
+          <select name="status" id="status">
+            <option value="INTERESTED">Interested</option>
+            <option value="APPLIED">Applied</option>
+            <option value="INTERVIEWING">Interviewing</option>
+            <option value="OFFERED">Offered</option>
+            <option value="ACCEPTED">Accepted</option>
+            <option value="REJECTED">Rejected</option>
+          </select>
         </div>
         <div>
           <label htmlFor="excitement">Excitement</label>
@@ -86,10 +92,7 @@ const JobForm = ({ setIsModalOpen, setAllJobs, jobsList, setJobsList }) => {
           <label htmlFor="description">Job Description</label>
           <input id="description" type="textfield"></input>
         </div>
-        <button
-          type="submit"
-          id="form-submit-btn"
-        >
+        <button type="submit" id="form-submit-btn">
           Save
         </button>
       </form>
