@@ -1,5 +1,4 @@
 import React from "react";
-import { useEffect } from "react";
 import "./trackerHeader.css";
 
 const TrackerHeader = ({ allJobs, setJobsList }) => {

@@ -1,4 +1,3 @@
-// import React, {useState} from "react";
 import "./myAccount.css";
 
 export const MyAccount = () => {
