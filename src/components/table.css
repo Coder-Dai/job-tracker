@@ -68,10 +68,6 @@ td {
 }
 
 #form-modal {
-  /* display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center; */
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
@@ -90,7 +86,7 @@ td {
 }
 
 #form-modal div input {
-  border:1px solid rgba(0,0,0,0.2);
+  border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 0.3rem;
   width: 90%;
   padding: 7px 3px;
@@ -102,7 +98,7 @@ td {
 }
 
 #form-submit-btn {
-  background-color: #00B0FF;
+  background-color: #00b0ff;
   color: #fff;
   border-radius: 2rem;
   width: 100px;
