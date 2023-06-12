@@ -5,12 +5,13 @@
 #myaccount-header {
   background-color: #00b0ff;
   height: 150px;
-  width: 100%;
+  width: 95%;
   border-radius: 0.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
   box-shadow: 0 0 5px;
+  margin-left: 60px;
 }
 #myaccount-header > h1 {
   color: #fff;
