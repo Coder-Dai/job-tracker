@@ -6,6 +6,7 @@ import "./table.css";
 
 const Table = ({ setAllJobs, jobsList, setJobsList }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [checkedJobs, setCheckedJobs] = useState([]);
 
   const openForm = () => {
     setIsModalOpen(true);
@@ -13,13 +14,29 @@ const Table = ({ setAllJobs, jobsList, setJobsList }) => {
 
   async function deleteJob() {
     if (jobsList.length !== 0) {
-      await deleteJobAsync(jobsList[0].$id);
-
       const newJobsList = [...jobsList];
-      newJobsList.shift();
+
+      for (let i = 0; i < checkedJobs.length; i++) {
+        const jobId = checkedJobs[i];
+
+        let index;
+
+        for (let j = 0; j < newJobsList.length; j++) {
+          const job = newJobsList[j];
+
+          if (job.$id === jobId) {
+            index = j;
+          }
+        }
+
+        newJobsList.splice(index, 1);
+
+        await deleteJobAsync(jobId);
+      }
 
       setAllJobs(newJobsList);
       setJobsList(newJobsList);
+      setCheckedJobs([]);
     }
   }
 
@@ -62,7 +79,22 @@ const Table = ({ setAllJobs, jobsList, setJobsList }) => {
             {jobsList?.map((job) => (
               <tr key={job.$id}>
                 <td>
-                  <input type="checkbox"></input>
+                  <input
+                    type="checkbox"
+                    onClick={() => {
+                      if (checkedJobs.includes(job.$id)) {
+                        const index = checkedJobs.indexOf(job.$id);
+                        checkedJobs.splice(index, 1);
+
+                        setCheckedJobs(checkedJobs);
+                      } else {
+                        setCheckedJobs((currCheckedJobs) => [
+                          ...currCheckedJobs,
+                          job.$id,
+                        ]);
+                      }
+                    }}
+                  ></input>
                 </td>
                 <td>{job.position}</td>
                 <td>{job.company}</td>
