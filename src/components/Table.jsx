@@ -62,9 +62,7 @@ const Table = ({ setAllJobs, jobsList, setJobsList }) => {
         <table>
           <thead>
             <tr>
-              <th>
-                <input type="checkbox"></input>
-              </th>
+              <th></th>
               <th>Position</th>
               <th>Company</th>
               <th>Salary</th>
