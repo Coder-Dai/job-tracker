@@ -5,11 +5,11 @@
 - Mukesh Thapa - @mthapa
 - Pratik Gurung - @pgurung
 - Pratik Magar - @magarpratik
-- Tayamul Rai - @
+- Tayamul Rai - @tayamul
 
 ## Description of Project
 
-A web app that enables users to track their job application journeys. This is enabled by allowing users to create and delete job applications from the job tracker. Allows them to input position, salary, company, location and job description along with deadline for each job.
+A web app that enables users to track their job application journeys. This is enabled by allowing users to create and delete job applications from the job tracker. Allowing them to input position, salary, company, location and job description along with deadline for each job.
 
 ## Tech Stack
 
@@ -23,4 +23,4 @@ A web app that enables users to track their job application journeys. This is en
 
 ## Demo Link
 
-<!--- Add a link to the demo recording of your project in this section →
+- https://youtu.be/rneN-kTfaFY
